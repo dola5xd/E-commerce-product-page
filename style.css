@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  border: 2px solid hsl(26, 100%, 55%);
+  opacity: 0.5;
+}

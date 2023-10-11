@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sneakers | Ecommerce</title>
+        <!-- Google-Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <!-- link favicon -->
+        <link
+        rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+        <!-- link Tailwind css -->
+        <link
+        href="./dist/output.css" rel="stylesheet">
+        <!-- link font-awosome -->
+        <script src="https://kit.fontawesome.com/ce8e04198d.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body class="relative h-full font-Kumbh">
+        <header class="py-3 px-5 lg:p-0 lg:px-24 border-b-[1px] border-[#eee] lg:border-0 fixed top-0 lg:static  bg-white w-full z-[2]">
+            <div class="flex justify-between items-center border-0 lg:border-b-[1px] lg:border-[#eee] ">
+                <div class="flex items-center justify-between ">
+                    <div class="block cursor-pointer lg:hidden" id="menu">
+                        <img src="./images/icon-menu.svg" >
+                    </div>
+                    <img src="./images/logo.svg" class="ml-3 cursor-pointer lg:mr-10 lg:mt-3 lg:ml-0">
+                    <div class="mt-2 ml-5">
+                        <ul class="items-center justify-between hidden mt-10 lg:flex">
+                            <li class="mr-8 text-Dark_grayish_blue-0 font-normal text-[16px] pb-8 border-b-4 border-white transition-all duration-500  hover:border-orange-0 hover:opacity-80 ">
+                                <a href="#">Collections</a>
+                            </li>
+                            <li class="mr-8 text-Dark_grayish_blue-0 font-normal text-[16px] pb-8 border-b-4 border-white transition-all duration-500  hover:border-orange-0 hover:opacity-80 ">
+                                <a href="#">Men</a>
+                            </li>
+                            <li class="mr-8 text-Dark_grayish_blue-0 font-normal text-[16px] pb-8 border-b-4 border-white transition-all duration-500  hover:border-orange-0 hover:opacity-80">
+                                <a href="#">Women</a>
+                            </li>
+                            <li class="mr-8 text-Dark_grayish_blue-0 font-normal text-[16px] pb-8 border-b-4 border-white transition-all duration-500  hover:border-orange-0 hover:opacity-80 ">
+                                <a href="#">About</a>
+                            </li>
+                            <li class="mr-8 text-Dark_grayish_blue-0 font-normal text-[16px] pb-8 border-b-4 border-white transition-all duration-500  hover:border-orange-0 hover:opacity-80 ">
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between user">
+                    <div class="relative cart">
+                        <img src="./images/icon-cart.svg" id="cart" class="mr-5 cursor-pointer">
+                        <span class="hidden left-[8px] rounded-full w-[25px] h-[20px] text-center text-white -top-[16px] absolute text-[0.9em] bg-orange-0" id="num_co"></span>
+                        <div id="co" class="absolute hidden bg-white  lg:translate-y-6 px-[18px]  py-10 w-[350px] lg:h-[255px] h-[280px]  rounded-2xl shadow-lg translate-x-[17%] translate-y-[4rem] right-1/2 max-[387px]:scale-[0.8] max-[387px]:translate-x-[31%]">
+                            <h3 class="ml-5 font-bold text-Very_dark_blue-0">Cart</h3>
+                            <hr class="mt-[10px]">
+                            <h5 class="text-center mt-[60px] text-Dark_grayish_blue-0  empty block">Your cart is empty
+                            </h5>
+                            <div class="flex-col items-center justify-center hidden py-10 content">
+                                <div class="flex items-center ">
+                                    <img src="./images/image-product-1-thumbnail.jpg" class="w-10 mr-5 rounded-lg">
+                                    <div class="flex flex-col justify-center text ">
+                                        <h2 class="text-sm text-Dark_grayish_blue-0">Fall Limited Edition Sneakers
+                                        </h2>
+                                        <span id="price" class="text-Very_dark_blue-0"></span>
+                                    </div>
+                                    <img src="./images/icon-delete.svg" class="ml-5 cursor-pointer" id="del">
+                                </div>
+                                <button id="Btn" class="mt-7  rounded-md p-3 w-[300px] text-white bg-orange-0 flex items-center justify-center shadow-md  transition-all duration-700  hover:opacity-70 hover:shadow-orange-0">
+                                    Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="./images/image-avatar.png" alt="Avatar" class="transition-all duration-700 border-2 rounded-full cursor-pointer w-14 h-1/4 hover:border-orange-0">
+                </div>
+            </div>
+        </header>
+        <div id="mobHeader" class="absolute  lg:hidden top-0 left-0  w-full h-[100vh]  z-50 overflow-hidden -translate-x-[100%] transition duration-500">
+            <div class="menu bg-white w-3/4 h-[100vh] p-8">
+                <span class="cursor-pointer" id="mob_close">
+                    <img src="./images/icon-close-mob.svg" class="mb-10 h-5 w-5">
+                </span>
+                <ul>
+                    <li class="mb-5">
+                        <a href="#" class="text-Very_dark_blue-0 text-xl font-bold transition duration-500 hover:text-orange-0">Collections</a>
+                    </li>
+                    <li class="mb-5">
+                        <a href="#" class="text-Very_dark_blue-0 text-xl font-bold transition duration-500 hover:text-orange-0">Men</a>
+                    </li">
+                    <li class="mb-5">
+                        <a href="#" class="text-Very_dark_blue-0 text-xl font-bold transition duration-500 hover:text-orange-0">Women</a>
+                    </li">
+                    <li class="mb-5">
+                        <a href="#" class="text-Very_dark_blue-0 text-xl font-bold transition duration-500 hover:text-orange-0">About</a>
+                    </li>
+                    <li class="mb-5">
+                        <a href="#" class="text-Very_dark_blue-0 text-xl font-bold transition duration-500 hover:text-orange-0">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <section class="select-none lg:p-20 ">
+            <div class="flex flex-col justify-between w-full lg:flex-row ">
+                <div class="hidden mt-20 max-w-1/2 lg:block">
+                    <div class="main rounded-2xl">
+                        <img src="./images/image-product-1.jpg" class="shadow-lg cursor-pointer rounded-2xl" id="Content">
+                    </div>
+                    <div class="flex justify-between mt-16 ml[80px] align-middle">
+                        <img src="./images/image-product-1-thumbnail.jpg" class="thumb active rounded-2xl mr-3 w-[100px] h-[100px] cursor-pointer transition-all duration-500 border-2  hover:opacity-100 hover:scale-110 border-transparent">
+                        <img src="./images/image-product-2-thumbnail.jpg" class="thumb rounded-2xl mr-3 w-[100px] h-[100px] cursor-pointer transition-all duration-500 border-2 hover:opacity-50 hover:scale-110 border-transparent">
+                        <img src="./images/image-product-3-thumbnail.jpg" class="thumb rounded-2xl mr-3 w-[100px] h-[100px] cursor-pointer transition-all duration-500 border-2 hover:opacity-50 hover:scale-110 border-transparent">
+                        <img src="./images/image-product-4-thumbnail.jpg" class="thumb rounded-2xl  w-[100px] h-[100px] cursor-pointer transition-all duration-500 border-2 hover:opacity-50 hover:scale-110 border-transparent">
+                    </div>
+                </div>
+                <div class="w-full lg:hidden">
+                    <div>
+                        <div class="relative w-full ">
+                            <span class="absolute left-0 flex items-center justify-center w-10 h-10 transition-all duration-500 bg-white rounded-full cursor-pointer top-1/2 -translate-x-0 hover:opacity-50" id="mo-l">
+                                <img src="./images/icon-previous.svg" >
+                            </span>
+                            <img src="./images/image-product-1.jpg" class="cursor-pointer h-auto  aspect-square w-full" id="ma-r">
+                            <span class="absolute right-0 flex items-center justify-center w-10 h-10 transition-all duration-500 translate-x-0 bg-white rounded-full cursor-pointer top-1/2 hover:opacity-50" id="mo-r"><img src="./images/icon-next.svg" >
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 lg:max-w-1/2 lg:pl-16 lg:p-32 min-[2560px]:pt-[404px]">
+                    <p class="text-orange-0 uppercase font-bold text-[12px]">Sneaker Company</p>
+                    <h3 class="my-3 text-3xl lg:text-[2.5em] lg:tracking-tighter font-bold leading-snug">Fall Limited Edition Sneakers
+                    </h3>
+                    <p class="mb-5  text-[16px] tracking-wide lg:tracking-normal lg:text-base text-Dark_grayish_blue-0">These low-profile sneakers are your perfect casual wearcompanion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                    <p class="flex items-center text-xl font-bold lg:text-3xl text-Very_dark_blue-0">$125.00
+                        <span class="px-2 py-1 ml-10 text-lg font-bold rounded-lg lg:text-xl bg-paleOrange-0 text-orange-0 ">50%</span>
+                        <span class="absolute block text-base line-through right-3 lg:hidden text-Dark_grayish_blue-0 opacity-40 ">$250.00</span>
+                    </p>
+                    <p class="hidden lg:block text-base text-Dark_grayish_blue-0 mt-5 opacity-40 after:w-[58px] relative after:absolute after:top-[13px] after:h-[1px] after:bg-Dark_grayish_blue-0 after:content-[''] after:block after:opacity-60">$250.00</p>
+                    <div class="flex flex-col items-center select-none count lg:flex-row mt-7">
+                        <div class="flex items-center justify-center">
+                            <span id="minus" class="bg-Light_grayish_blue-0 h-[50px] flex items-center  w-[50px] lg:p-5 border-r-[1px] border-r-[#eee] cursor-pointer">
+                                <img class="cursor-pointer m-auto" src="./images/icon-minus.svg">
+                            </span>
+                            <input type="number" disabled value="0" id="num" class="bg-Light_grayish_blue-0 w-[160px] tablet:w-auto h-[50px] lg:p-5  lg:w-[100px] text-center text-Very_dark_blue-0 text-2xl">
+                            <span id="plus" class="bg-Light_grayish_blue-0 flex items-center w-[50px] h-[50px] lg:p-5 border-l-[1px] border-l-[#eee] cursor-pointer">
+                                <img class="cursor-pointer m-auto" src="./images/icon-plus.svg">
+                            </span>
+                        </div>
+                        <button id="addBtn" class="lg:ml-7 rounded-md p-3 mt-7 lg:mt-0 w-[95%]   lg:w-52 text-white bg-orange-0 flex items-center justify-center shadow-md  transition-all duration-700  hover:opacity-70 hover:shadow-orange-0"><img src="./images/icon-cart-btn.svg" class="mr-5 ">
+                            Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" hidden absolute top-0  left-0  bg-opacity-70  bg-black w-full h-[100vh]" id="lightbox">
+                <div class="mt-[15%] relative">
+                    <span class="absolute right-0  mr-[33vw] translate-y-[-30px] text-[2em] text-white cursor-pointer" id="x"><img src="./images/icon-close.svg" class="w-4"></span>
+                    <div class="relative w-1/3 m-auto">
+                        <span class="absolute left-0 flex items-center justify-center w-10 h-10 transition-all duration-500 -translate-x-5 bg-white rounded-full cursor-pointer top-1/2 hover:opacity-50" id="left">
+                            <img src="./images/icon-previous.svg" >
+                        </span>
+                        <img src="./images/image-product-1.jpg" class="shadow-lg cursor-pointer rounded-2xl" id="main">
+                        <span class="absolute right-0 flex items-center justify-center w-10 h-10 transition-all duration-500 translate-x-5 bg-white rounded-full cursor-pointer top-1/2 hover:opacity-50" id="right">
+                            <img src="./images/icon-next.svg">
+                        </span>
+                    </div>
+                    <div class="flex justify-center mt-16 align-middle">
+                        <img src="./images/image-product-1-thumbnail.jpg" class="thumbl  active rounded-2xl mr-3 w-[100px] h-[100px] cursor-pointer transition-all duration-500 border-2 border-transparent hover:scale-110 ">
+                        <img src="./images/image-product-2-thumbnail.jpg" class="thumbl rounded-2xl mr-3 w-[100px] h-[100px] cursor-pointer transition-all duration-500 border-2  border-transparent hover:scale-110">
+                        <img src="./images/image-product-3-thumbnail.jpg" class="thumbl rounded-2xl mr-3 w-[100px] h-[100px] cursor-pointer transition-all duration-500 border-2  border-transparent hover:scale-110">
+                        <img src="./images/image-product-4-thumbnail.jpg" class="thumbl rounded-2xl  w-[100px] h-[100px] cursor-pointer transition-all duration-500 border-2  border-transparent hover:scale-110">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-16  w-[350px] bg-black bg-opacity-70 shadow-xl  flex-col items-center justify-center rounded-xl" id="popup">
+            <span class="absolute cursor-pointer right-1 top-2" id="close"><img src="./images/icon-close.svg" ></span>
+            <i class="fa-solid fa-circle-check fa-bounce text-orange-0 text-[3em]"></i>
+            <p class="mt-10 text-xl font-bold text-white">Thank's for Buying</p>
+        </div>
+        <script src="./main.js"></script>
+        </body>
+    </html>
